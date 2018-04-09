@@ -1,9 +1,9 @@
 # https://hub.docker.com/_/golang
 FROM golang:1.10-alpine
 
-MAINTAINER Instrumentisto Team <developer@instrumentisto.com>
+MAINTAINER Anuruddha <anuruddhapremalal@gmail.com>
 
-
+RUN go get golang.org/x/tools/cmd/goimports
 RUN apk add --update --no-cache \
         ca-certificates \
         # https://github.com/Masterminds/glide#supported-version-control-systems
