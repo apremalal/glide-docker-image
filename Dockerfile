@@ -1,5 +1,5 @@
 # https://hub.docker.com/_/golang
-FROM golang:1.10-alpine
+FROM golang:1.9.5-alpine
 
 MAINTAINER Anuruddha <anuruddhapremalal@gmail.com>
 
@@ -8,7 +8,7 @@ RUN apk update && \
     apk add git
 
 RUN go get golang.org/x/tools/cmd/goimports
-
+RUN go get github.com/beego/bee
 RUN apk add --update --no-cache \
         ca-certificates \
         # https://github.com/Masterminds/glide#supported-version-control-systems
@@ -41,5 +41,5 @@ RUN apk add --update --no-cache \
            $GOPATH/src/* \
            /tmp/*
 
-
-ENTRYPOINT ["/usr/local/bin/glide"]
+ENV PATH=$PATH:$GOPATH/bin
+WORKDIR $GOPATH
