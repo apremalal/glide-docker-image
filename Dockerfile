@@ -9,13 +9,14 @@ RUN apk update && \
 
 RUN go get golang.org/x/tools/cmd/goimports
 RUN go get github.com/beego/bee
+RUN apk add --no-cache gcc
+RUN apk add --no-cache g++
+RUN apk add --no-cache file
 RUN apk add --update --no-cache \
         ca-certificates \
         # https://github.com/Masterminds/glide#supported-version-control-systems
         git mercurial subversion bzr \
-        openssh \
-        gcc \
-        file \
+        openssh \ 
  && update-ca-certificates \
     \
  # Install build dependencies
