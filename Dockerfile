@@ -14,6 +14,8 @@ RUN apk add --update --no-cache \
         # https://github.com/Masterminds/glide#supported-version-control-systems
         git mercurial subversion bzr \
         openssh \
+        gcc \
+        file \
  && update-ca-certificates \
     \
  # Install build dependencies
