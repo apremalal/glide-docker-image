@@ -1,5 +1,5 @@
 # https://hub.docker.com/_/golang
-FROM golang:1.9.5-alpine
+FROM golang:1.11-alpine3.8
 
 MAINTAINER Anuruddha <anuruddhapremalal@gmail.com>
 
