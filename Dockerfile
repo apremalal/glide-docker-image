@@ -9,6 +9,7 @@ RUN apk update && \
 
 RUN go get golang.org/x/tools/cmd/goimports
 RUN go get github.com/beego/bee
+RUN go get honnef.co/go/tools/cmd/staticcheck
 RUN apk add --no-cache gcc
 RUN apk add --no-cache g++
 RUN apk add --no-cache file
