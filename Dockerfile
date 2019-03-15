@@ -57,5 +57,5 @@ RUN apk add --no-cache python3 && \
 # install aws cli
 RUN pip3 install awscli --upgrade --user
 
-ENV PATH=$PATH:$GOPATH/bin
+ENV PATH=$PATH:$GOPATH/bin:~/.local/bin
 WORKDIR $GOPATH
